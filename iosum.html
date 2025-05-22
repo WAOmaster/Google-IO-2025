@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google I/O 2025: AI Ascendant - Market Insights (Google I/O Theme)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #202124; /* Google Dark Theme Background */
+            color: #E8EAED; /* Google Light Text on Dark */
+        }
+        .card {
+            background-color: #303134; /* Google Dark Card Background */
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            /* Color will be set dynamically or section-wise */
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: #BDC1C6; /* Google Secondary Text */
+        }
+        h1 {
+            color: #FFFFFF; /* White for main title */
+        }
+        h2 { /* Section Titles - will cycle through Google Colors */
+            /* Example: color: #4285F4; (Google Blue) */
+        }
+        h3, .chart-title {
+            color: #E8EAED; /* Light text for subheadings */
+        }
+        .section-intro {
+            color: #BDC1C6; /* Secondary text for intro */
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .chart-explanation {
+            font-size: 0.85rem;
+            color: #BDC1C6;
+            text-align: center;
+            margin-top: 0.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .flowchart-step {
+            /* background-color will be a Google color */
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .flowchart-arrow {
+            /* color will be a contrasting Google color */
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0.25rem;
+        }
+        .swot-item {
+             background-color: #3C4043; /* Darker shade for SWOT items */
+        }
+        .swot-item h4 {
+            /* color will be a Google color */
+        }
+
+        /* Google I/O Themed Colors */
+        /* googleBlue: '#4285F4' */
+        /* googleRed: '#DB4437' */
+        /* googleYellow: '#F4B400' */
+        /* googleGreen: '#0F9D58' */
+        /* darkBackground: '#202124' */
+        /* cardBackground: '#303134' */
+        /* lightText: '#E8EAED' */
+        /* secondaryText: '#BDC1C6' */
+
+        /* Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in this output. */
+        /* All diagrams are implemented using HTML/CSS with Tailwind. All charts use Chart.js (Canvas). */
+
+        /*
+            Infographic Narrative & Structure Plan: (Remains the same)
+            1.  Hero Section: Title - Google I/O 2025: AI Ascendant, brief intro.
+            2.  The AI Revolution: Overall AI-centric strategy, Gemini adoption key stats.
+            3.  Gemini Ecosystem - Powering the Future: Model updates, "Deep Think," new subscription tiers.
+            4.  Search Reimagined - Beyond Links: AI Mode, Agentic Search, Personalization.
+            5.  Immersive Realities - Android XR & Beam: New platform, partnerships, 3D communication.
+            6.  Generative Media - AI Unleashed: Veo 3, Imagen 4, Flow.
+            7.  Developer Empowerment - Building with AI: Jules, Stitch, Gemma.
+            8.  Google's Competitive Edge & Market Dynamics: Core Strengths, Positioning.
+            9.  Monetization - The AI Business Model: Subscriptions, Ad model evolution, Costs.
+            10. Future Impact - Reshaping Our World: Technological, Social, Economic.
+            11. Conclusion: Google's AI-centric future and the trilemma.
+        */
+
+        /*
+            Visualization Choices & Justifications (Confirming NO SVG, NO MERMAID JS): (Remains the same)
+        */
+    </style>
+</head>
+<body class="text-gray-200">
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+
+        <header class="text-center py-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Google I/O 2025: AI Ascendant</h1>
+            <p class="text-xl text-gray-300">Reshaping Search, Experience, and the Future of Technology</p>
+        </header>
+
+        <section id="ai-revolution" class="mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-semibold mb-6 text-center" style="color: #4285F4;">The AI-Centric Revolution Unfurls</h2>
+                <p class="section-intro text-center max-w-3xl mx-auto">
+                    Google I/O 2025 unequivocally positioned Artificial Intelligence as the central nervous system of its strategy. AI, especially the Gemini family, is no longer supplementary but the fundamental architectural backbone, driving a new golden age of discovery and wonder. This AI is engineered to be more personal, proactive, and powerful, transforming Google's entire product ecosystem.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center mt-8">
+                    <div>
+                        <p class="stat-value" style="color: #4285F4;">50x</p>
+                        <p class="stat-label">YoY Increase in Gemini Token Processing</p>
+                        <p class="text-xs text-gray-400">(Over 480 Trillion Tokens Monthly)</p>
+                    </div>
+                    <div>
+                        <p class="stat-value" style="color: #DB4437;">7M+</p>
+                        <p class="stat-label">Developers Building with Gemini</p>
+                    </div>
+                    <div>
+                        <p class="stat-value" style="color: #F4B400;">400M+</p>
+                        <p class="stat-label">Gemini App Monthly Active Users</p>
+                    </div>
+                    <div>
+                        <p class="stat-value" style="color: #0F9D58;">1.5B</p>
+                        <p class="stat-label">Monthly Users of AI Overviews</p>
+                    </div>
+                </div>
+                <p class="chart-explanation mt-6">These figures highlight the massive scale and rapid adoption of Google's AI initiatives, indicating a fundamental shift in user and developer engagement with AI technologies.</p>
+            </div>
+        </section>
+
+        <section id="gemini-ecosystem" class="mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-semibold mb-6 text-center" style="color: #DB4437;">Gemini Ecosystem: Powering the Future</h2>
+                <p class="section-intro text-center max-w-3xl mx-auto">
+                    The Gemini family of models saw substantial updates, reinforcing Google's "model for every need" strategy. From the high-capability Gemini 2.5 Pro with its "Deep Think" reasoning mode to efficient on-device Nano models, the ecosystem is expanding, complemented by new subscription tiers to monetize advanced features.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-center">Key Gemini Model Advancements</h3>
+                        <ul class="list-disc list-inside space-y-2 pl-4 text-gray-300">
+                            <li><strong>Gemini 2.5 Pro:</strong> Google's most capable model, enhanced with "Deep Think" for complex, multi-step reasoning and problem-solving. Reportedly sweeping LMArena leaderboards.</li>
+                            <li><strong>Gemini 2.5 Flash:</strong> Highly efficient and fast model, improved across reasoning, multimodality, and long context.</li>
+                            <li><strong>Gemini Nano:</strong> On-device AI with new ML Kit GenAI APIs and built-in Chrome APIs (Summarizer, Translator).</li>
+                            <li><strong>Gemini Live:</strong> Real-time, multimodal AI assistant (integrating Project Astra capabilities), now free for all users.</li>
+                        </ul>
+                        <p class="chart-explanation mt-4">This multi-model approach allows Google to optimize for performance, cost, and specific use cases, from cloud-based agents to on-device intelligence.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-center">New Google AI Subscription Tiers</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-700">
+                                <thead class="bg-gray-700/50">
+                                    <tr>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Tier</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Price/Month</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Key Features</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-600">
+                                    <tr>
+                                        <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-white">Google AI Pro</td>
+                                        <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-300">$19.99</td>
+                                        <td class="px-4 py-2 text-sm text-gray-300">Access to advanced models (e.g., Veo 3), higher limits.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-white">Google AI Ultra</td>
+                                        <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-300">$249.99</td>
+                                        <td class="px-4 py-2 text-sm text-gray-300">Top-tier models (Deep Think, Veo 3), highest limits, 30TB storage, experimental agent tools (Project Mariner).</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="chart-explanation mt-4">These subscription tiers establish clear monetization paths for Google's cutting-edge AI, targeting power users and enterprises while reflecting the high costs of AI development and operation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="search-reimagined" class="mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-semibold mb-6 text-center" style="color: #F4B400;">Search Reimagined: Beyond Links to Action</h2>
+                <p class="section-intro text-center max-w-3xl mx-auto">
+                    Google Search is undergoing a radical transformation. AI Mode, powered by Gemini 2.5, is rolling out to all US users, offering conversational interactions and, critically, agentic capabilities to perform tasks directly. This evolves Search from information retrieval to an intelligent, action-oriented assistant.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="chart-title">AI-Powered Search: Key Evolutions</h3>
+                        <ul class="list-disc list-inside space-y-2 pl-4 text-gray-300 mt-4">
+                            <li><strong>AI Mode:</strong> Conversational, end-to-end AI experience for complex queries. Users reportedly asking 2-3x longer queries.</li>
+                            <li><strong>Search Live:</strong> Project Astra integration for multimodal search about real-time visual surroundings.</li>
+                            <li><strong>Agentic Search (Project Mariner):</strong> AI performs tasks like booking tickets, making reservations, and automated shopping (virtual try-ons, agentic checkout).</li>
+                            <li><strong>Hyper-Personalization:</strong> Leverages context from past searches and (with permission) other Google apps like Gmail and Drive for tailored results.</li>
+                            <li><strong>AI Overviews:</strong> Expanding globally, driving >10% growth in relevant query types in key markets.</li>
+                        </ul>
+                         <p class="chart-explanation mt-4">The shift towards agentic, personalized search aims to significantly enhance user utility but also poses challenges to traditional ad models and raises privacy considerations.</p>
+                    </div>
+                    <div>
+                        <h3 class="chart-title">Illustrative Agentic Search Flow: Booking a Restaurant</h3>
+                        <div class="flex flex-col items-center space-y-2 mt-4">
+                            <div class="flowchart-step w-full max-w-xs" style="background-color: #4285F4;">User: "Find a table for 2 at an Italian restaurant near me for tomorrow at 7 PM"</div>
+                            <div class="flowchart-arrow" style="color: #F4B400;">▼</div>
+                            <div class="flowchart-step w-full max-w-xs" style="background-color: #0F9D58;">AI Search (Gemini): Identifies options, checks availability</div>
+                            <div class="flowchart-arrow" style="color: #F4B400;">▼</div>
+                            <div class="flowchart-step w-full max-w-xs" style="background-color: #4285F4;">AI Search: "Found 'Luigi's Trattoria' with availability. Book it?"</div>
+                            <div class="flowchart-arrow" style="color: #F4B400;">▼</div>
+                            <div class="flowchart-step w-full max-w-xs" style="background-color: #DB4437;">User: "Yes"</div>
+                            <div class="flowchart-arrow" style="color: #F4B400;">▼</div>
+                            <div class="flowchart-step w-full max-w-xs" style="background-color: #0F9D58;">AI Search (Agentic): Completes booking via restaurant's system, confirms with user.</div>
+                        </div>
+                        <p class="chart-explanation mt-4">This simplified flow demonstrates how AI agents within Search can handle multi-step tasks, moving beyond information provision to direct action.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="immersive-realities" class="mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-semibold mb-6 text-center" style="color: #0F9D58;">Immersive Realities: Android XR & Google Beam</h2>
+                <p class="section-intro text-center max-w-3xl mx-auto">
+                    Google is making a significant re-entry into immersive computing with Android XR, a new AI-first platform for AR/VR. Partnering with industry leaders, Google aims to create practical and compelling XR experiences. Complementing this, Google Beam (formerly Project Starline) promises hyper-realistic 3D video communication.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="chart-title">Android XR Ecosystem</h3>
+                        <div class="mt-4 p-4 border-2 border-dashed rounded-lg text-center" style="border-color: #4285F4;">
+                            <div class="font-bold text-lg text-white mb-2">Google Android XR Platform</div>
+                            <p class="text-sm text-gray-400 mb-3">(Built in the Gemini Era)</p>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="flowchart-step" style="background-color: #DB4437;">Samsung (Project Moohan Headset)</div>
+                                <div class="flowchart-step" style="background-color: #F4B400;">Qualcomm (AI Tech Optimization)</div>
+                                <div class="flowchart-step" style="background-color: #0F9D58;">Gentle Monster (XR Glasses)</div>
+                                <div class="flowchart-step" style="background-color: #4285F4;">Warby Parker (XR Glasses)</div>
+                                <div class="flowchart-step col-span-2" style="background-color: #DB4437;">XREAL (Project Aura) & Other Developers</div>
+                            </div>
+                        </div>
+                        <p class="chart-explanation mt-4">Android XR aims to foster a diverse hardware ecosystem, with AI (Gemini) as a core differentiator for features like real-time translation and contextual assistance in smart glasses.</p>
+                    </div>
+                    <div>
+                        <h3 class="chart-title">Google Beam: The Future of Presence</h3>
+                         <img src="https://ik.imagekit.io/ignzmq4y2/Whisk_gif_ja3owq3mwu.gif?updatedAt=1747925896297" alt="Google Beam Concept" class="rounded-lg shadow-lg mx-auto mt-4" onerror="this.src='https://placehold.co/600x300/303134/E8EAED?text=Image+Error'; this.alt='Placeholder for Google Beam Concept';">
+                        <ul class="list-disc list-inside space-y-1 pl-4 text-gray-300 mt-4 text-sm">
+                            <li>AI-first 3D video communication platform.</li>
+                            <li>Uses multiple webcams and AI for realistic 3D rendering.</li>
+                            <li>Near-perfect head tracking (60fps).</li>
+                            <li>Preserves non-verbal cues (eye contact, gestures).</li>
+                            <li>Partnership with HP for commercial devices.</li>
+                            <li>Integration with Google Meet (live speech translation).</li>
+                        </ul>
+                        <p class="chart-explanation mt-4">Google Beam targets enterprise use cases, aiming to revolutionize remote collaboration with immersive, life-like interactions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="generative-media" class="mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-semibold mb-6 text-center" style="color: #4285F4;">Generative Media: AI Unleashed</h2>
+                <p class="section-intro text-center max-w-3xl mx-auto">
+                    Google showcased significant advancements in generative media. Veo 3 now features native audio generation, Imagen 4 offers enhanced image quality, and Flow provides an AI filmmaking toolkit, all while emphasizing responsible AI with SynthID watermarking.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h3 class="chart-title">Veo 3 & Imagen 4: Pushing Creative Boundaries</h3>
+                        <div class="mt-4 space-y-3">
+                            <div class="p-3 rounded-md" style="background-color: #3C4043;">
+                                <h4 class="font-semibold text-white">Veo 3 (Video Generation)</h4>
+                                <ul class="list-disc list-inside text-sm text-gray-300 pl-2">
+                                    <li>Native audio generation (dialogue, sound effects).</li>
+                                    <li>Improved realism and physics understanding.</li>
+                                    <li>Accurate lip-syncing.</li>
+                                    <li>Generates 4K video clips up to 3 minutes.</li>
+                                </ul>
+                            </div>
+                            <div class="p-3 rounded-md" style="background-color: #3C4043;">
+                                <h4 class="font-semibold text-white">Imagen 4 (Image Generation)</h4>
+                                <ul class="list-disc list-inside text-sm text-gray-300 pl-2">
+                                    <li>Improved texture rendering.</li>
+                                    <li>Significantly better text generation within images.</li>
+                                    <li>Richer detail and greater realism.</li>
+                                </ul>
+                            </div>
+                             <div class="p-3 rounded-md" style="background-color: #3C4043;">
+                                <h4 class="font-semibold text-white">Flow (AI Filmmaking Tool)</h4>
+                                <ul class="list-disc list-inside text-sm text-gray-300 pl-2">
+                                    <li>Integrates Veo 3 and Imagen 4.</li>
+                                    <li>Storyboarding, AI clip generation/blending via natural language.</li>
+                                    <li>Available to Google AI Pro & Ultra subscribers.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="chart-explanation mt-4">These tools aim to democratize and transform media production, offering powerful capabilities to creators.</p>
+                    </div>
+                    <div>
+                        <h3 class="chart-title">SynthID: Responsible AI Content Watermarking</h3>
+                        <div class="chart-container mx-auto h-64 md:h-80">
+                            <canvas id="synthIdChart"></canvas>
+                        </div>
+                        <p class="chart-explanation mt-4">Google reports 10 billion pieces of content already marked with SynthID, its digital watermarking technology. This chart (hypothetically) illustrates the growing adoption of watermarking for AI-generated media, crucial for transparency and combating misinformation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="developer-empowerment" class="mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-semibold mb-6 text-center" style="color: #DB4437;">Developer Empowerment: Building with AI</h2>
+                <p class="section-intro text-center max-w-3xl mx-auto">
+                    Google unveiled a suite of AI-driven tools to catalyze innovation, including the Jules coding agent, Stitch UI generator, and an expanded Gemma family of open models, deeply embedding AI into development workflows.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <h3 class="chart-title">New AI-Powered Developer Tools</h3>
+                        <ul class="list-disc list-inside space-y-2 pl-4 text-gray-300 mt-4">
+                            <li><strong>Jules:</strong> Asynchronous AI coding agent (public beta). Reads code, fixes bugs, writes tests, creates PRs. 5 free tasks/day.</li>
+                            <li><strong>Stitch:</strong> Google Labs tool to create UI and front-end code from natural language and reference images.</li>
+                            <li><strong>Gemini in Android Studio:</strong> "Image to Code," "Journeys" for test UIs, "Version Upgrade Agent."</li>
+                            <li><strong>Firebase AI Logic & Studio:</strong> More powerful models, Figma import, Gemini image generation.</li>
+                            <li><strong>Chrome DevTools AI:</strong> Gemini assistance for debugging.</li>
+                        </ul>
+                        <p class="chart-explanation mt-4">These tools aim to significantly boost developer productivity and integrate Google's AI ecosystem into daily workflows.</p>
+                    </div>
+                    <div>
+                        <h3 class="chart-title">Gemma Open Models Expansion</h3>
+                        <div class="chart-container mx-auto h-72 md:h-80">
+                            <canvas id="gemmaModelsChart"></canvas>
+                        </div>
+                        <p class="chart-explanation mt-4">The Gemma family expanded with models like Gemma 3n (mobile-first), MedGemma (medical), and SignGemma (sign language understanding), promoting responsible and accessible AI development for niche use cases and edge computing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competitive-edge" class="mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-semibold mb-6 text-center" style="color: #F4B400;">Competitive Edge & Market Dynamics</h2>
+                <p class="section-intro text-center max-w-3xl mx-auto">
+                    Google leverages its AI research, custom infrastructure (like the new 7th Gen TPUs), vast data, and ecosystem synergies to compete. However, the rise of AI chatbots presents both challenges and opportunities for its dominant search business.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="chart-title">7th Gen TPU "Ironwood" Performance</h3>
+                        <div class="chart-container mx-auto h-64 md:h-80">
+                            <canvas id="tpuPerformanceChart"></canvas>
+                        </div>
+                        <p class="chart-explanation mt-4">The new "Ironwood" TPUs deliver 10x performance over the previous generation (42.5 exaflops/pod), crucial for powering advanced AI workloads and maintaining an infrastructure advantage.</p>
+                    </div>
+                    <div>
+                        <h3 class="chart-title">Hypothetical Search Market Share Shift (Illustrative)</h3>
+                         <div class="chart-container mx-auto h-64 md:h-80">
+                            <canvas id="searchMarketShareChart"></canvas>
+                        </div>
+                        <p class="chart-explanation mt-4">While Google Search remains dominant, AI chatbots are emerging as alternatives for information retrieval. This illustrative chart depicts a potential scenario of market share evolution, reflecting concerns over Google's traditional search model. (Note: Actual shares vary by source and methodology; this is conceptual based on report sentiment).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="monetization" class="mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-semibold mb-6 text-center" style="color: #0F9D58;">Monetization: The Evolving AI Business Model</h2>
+                <p class="section-intro text-center max-w-3xl mx-auto">
+                    Google is pursuing a multi-pronged AI monetization strategy, including premium subscriptions (AI Pro & Ultra) and evolving its core advertising model for AI-driven search, while grappling with higher AI query costs.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                         <h3 class="chart-title">Projected Ad Revenue from AI Overviews</h3>
+                        <div class="chart-container mx-auto h-72 md:h-80">
+                            <canvas id="aiAdRevenueChart"></canvas>
+                        </div>
+                        <p class="chart-explanation mt-4">Google is embedding ads in AI Overviews. Projections suggest this could grow from 1% of search ad revenue in 2025 to 6-7% by 2027, a key part of adapting its ad model.</p>
+                    </div>
+                    <div>
+                        <h3 class="chart-title">The Cost Factor: AI vs. Traditional Search</h3>
+                        <div class="text-center mt-8">
+                            <p class="text-lg text-gray-300">Serving an LLM-based response can cost</p>
+                            <p class="text-5xl font-bold my-2" style="color: #DB4437;">~10x</p>
+                            <p class="text-lg text-gray-300">more than a traditional web search query.</p>
+                            <p class="text-sm text-gray-400 mt-2">(Up to 50x for complex agentic tasks)</p>
+                        </div>
+                        <p class="chart-explanation mt-6">Higher computational costs for AI queries necessitate new revenue streams (like subscriptions) and more efficient AI ad formats to maintain profit margins.</p>
+                    </div>
+                </div>
+                 <div class="mt-8 text-center">
+                    <h3 class="text-xl font-semibold mb-2">Google One Subscription Growth</h3>
+                    <p class="stat-value !text-3xl" style="color: #4285F4;">150M+</p>
+                    <p class="stat-label">Subscribers to Google One (benefiting from AI tiers)</p>
+                    <p class="chart-explanation mt-2">This existing subscriber base indicates a receptive market for paid AI enhancements, supporting the new AI Pro and Ultra tiers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="future-impact" class="mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-semibold mb-6 text-center" style="color: #4285F4;">Future Impact: Reshaping Our World</h2>
+                <p class="section-intro text-center max-w-3xl mx-auto">
+                    The AI breakthroughs from I/O 2025 are set to have profound technological, social, and economic consequences, reshaping industries, human-computer interaction, and presenting new societal challenges and opportunities.
+                </p>
+                <div class="text-center my-6">
+                    <p class="text-lg text-gray-300">Generative AI alone could add</p>
+                    <p class="stat-value !text-4xl my-2" style="color: #0F9D58;">$2.6T - $4.4T</p>
+                    <p class="text-lg text-gray-300">annually to the global economy (McKinsey estimate).</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                    <div class="p-4 rounded-lg swot-item">
+                        <h4 class="font-semibold text-lg mb-2" style="color: #4285F4;">Technological Transformation</h4>
+                        <ul class="list-disc list-inside text-sm space-y-1 text-gray-300">
+                            <li>Agentic AI as the new paradigm.</li>
+                            <li>Multimodal interfaces become standard.</li>
+                            <li>AI reinvigorates XR development.</li>
+                            <li>Democratization of advanced AI tools.</li>
+                            <li>Acceleration in AI R&D and adoption.</li>
+                            <li>Growing environmental concerns (energy, resources).</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 rounded-lg swot-item">
+                        <h4 class="font-semibold text-lg mb-2" style="color: #DB4437;">Social Shifts & Challenges</h4>
+                        <ul class="list-disc list-inside text-sm space-y-1 text-gray-300">
+                            <li>Workforce transformation: automation & reskilling needs.</li>
+                            <li>Impact on creative industries (IP, job roles).</li>
+                            <li>Evolving human-AI interaction (reliance, agency).</li>
+                            <li>Digital accessibility advancements.</li>
+                            <li>Ethical dilemmas: privacy, bias, accountability, AI governance.</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 rounded-lg swot-item">
+                        <h4 class="font-semibold text-lg mb-2" style="color: #F4B400;">Economic Reshaping</h4>
+                        <ul class="list-disc list-inside text-sm space-y-1 text-gray-300">
+                            <li>Significant productivity gains across industries.</li>
+                            <li>Market disruption (Search, Software Dev, Media).</li>
+                            <li>Emergence of new AI-driven economic sectors.</li>
+                            <li>Potential for increased economic disparities.</li>
+                            <li>High capital investment creating barriers to entry.</li>
+                        </ul>
+                    </div>
+                </div>
+                 <p class="chart-explanation mt-6">The pervasive integration of AI promises unprecedented productivity and new forms of interaction, while simultaneously raising critical questions about the future of work, data privacy, algorithmic bias, and human-AI collaboration.</p>
+            </div>
+        </section>
+
+        <footer class="text-center py-10">
+            <h2 class="text-2xl font-semibold mb-4" style="color: #0F9D58;">Google's AI-Centric Future: Innovation, Responsibility, Monetization</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-sm">
+                Google I/O 2025 underscored a bold strategy to lead the AI era. Success will depend on balancing rapid innovation with responsible development that addresses ethical and societal concerns, all while finding sustainable monetization models. The journey ahead requires not just technological brilliance, but profound wisdom and foresight.
+            </p>
+            <p class="text-xs text-gray-500 mt-8">Infographic based on the "Google I/O 2025 Day 1: AI Ascendant" report. All data derived from the provided report. Charts are illustrative based on report data and sentiment. No SVG or Mermaid JS used. Colors updated to Google I/O Theme.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const FONT_COLOR = '#E8EAED'; 
+        const GRID_COLOR = '#5F6368'; // Slightly lighter grid for better visibility on dark bg
+
+        const GOOGLE_PALETTE = {
+            blue: '#4285F4',
+            red: '#DB4437',
+            yellow: '#F4B400',
+            green: '#0F9D58',
+            darkBackground: '#202124',
+            cardBackground: '#303134'
+        };
+
+        function processLabels(labels) {
+            return labels.map(label => {
+                if (typeof label === 'string' && label.length > 16) {
+                    const words = label.split(' ');
+                    const lines = [];
+                    let currentLine = '';
+                    for (const word of words) {
+                        if ((currentLine + word).length > 16 && currentLine.length > 0) {
+                            lines.push(currentLine.trim());
+                            currentLine = '';
+                        }
+                        currentLine += word + ' ';
+                    }
+                    lines.push(currentLine.trim());
+                    return lines;
+                }
+                return label;
+            });
+        }
+
+        const tooltipTitleCallback = function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const SHARED_CHART_OPTIONS = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: FONT_COLOR,
+                        boxWidth: 15,
+                        padding: 15
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: 'rgba(0,0,0,0.7)',
+                    titleColor: FONT_COLOR,
+                    bodyColor: FONT_COLOR,
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: { color: FONT_COLOR, font: {size: 10} },
+                    grid: { color: GRID_COLOR }
+                },
+                x: {
+                    ticks: { color: FONT_COLOR, font: {size: 10} },
+                    grid: { color: GRID_COLOR }
+                }
+            }
+        };
+
+        const synthIdCtx = document.getElementById('synthIdChart')?.getContext('2d');
+        if (synthIdCtx) {
+            new Chart(synthIdCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: processLabels(['SynthID Content', 'Other AI Content']),
+                    datasets: [{
+                        label: 'AI Content Watermarking',
+                        data: [10, 5],
+                        backgroundColor: [GOOGLE_PALETTE.green, GOOGLE_PALETTE.blue],
+                        borderColor: [GOOGLE_PALETTE.cardBackground],
+                        borderWidth: 2
+                    }]
+                },
+                options: { ...SHARED_CHART_OPTIONS, cutout: '60%' }
+            });
+        }
+
+        const gemmaCtx = document.getElementById('gemmaModelsChart')?.getContext('2d');
+        if (gemmaCtx) {
+            new Chart(gemmaCtx, {
+                type: 'bar',
+                data: {
+                    labels: processLabels(['Gemma 3n (Mobile)', 'MedGemma (Medical)', 'SignGemma (Accessibility)', 'DolphinGemma (Research)']),
+                    datasets: [{
+                        label: 'Number of Specialized Gemma Models (Illustrative)',
+                        data: [1, 1, 1, 1],
+                        backgroundColor: [GOOGLE_PALETTE.red, GOOGLE_PALETTE.yellow, GOOGLE_PALETTE.green, GOOGLE_PALETTE.blue],
+                        borderColor: [GOOGLE_PALETTE.cardBackground],
+                        borderWidth: 1
+                    }]
+                },
+                options: SHARED_CHART_OPTIONS
+            });
+        }
+
+        const tpuCtx = document.getElementById('tpuPerformanceChart')?.getContext('2d');
+        if (tpuCtx) {
+            new Chart(tpuCtx, {
+                type: 'bar',
+                data: {
+                    labels: processLabels(['Previous Gen TPU', '7th Gen TPU "Ironwood"']),
+                    datasets: [{
+                        label: 'Relative Performance (Illustrative)',
+                        data: [1, 10], 
+                        backgroundColor: [GOOGLE_PALETTE.blue, GOOGLE_PALETTE.green],
+                         borderColor: [GOOGLE_PALETTE.cardBackground],
+                        borderWidth: 1
+                    }]
+                },
+                options: { SHARED_CHART_OPTIONS, indexAxis: 'y' }
+            });
+        }
+        
+        const searchMarketShareCtx = document.getElementById('searchMarketShareChart')?.getContext('2d');
+        if (searchMarketShareCtx) {
+            new Chart(searchMarketShareCtx, {
+                type: 'pie',
+                data: {
+                    labels: processLabels(['Trad.Google Srch', 'AI Chatbots/Asts', 'Other Srch Eng']),
+                    datasets: [{
+                        label: 'Hypothetical Search Information Retrieval Share',
+                        data: [75, 15, 10], 
+                        backgroundColor: [GOOGLE_PALETTE.blue, GOOGLE_PALETTE.red, GOOGLE_PALETTE.yellow],
+                        borderColor: [GOOGLE_PALETTE.cardBackground],
+                        borderWidth: 2
+                    }]
+                },
+                options: SHARED_CHART_OPTIONS
+            });
+        }
+
+        const aiAdRevenueCtx = document.getElementById('aiAdRevenueChart')?.getContext('2d');
+        if (aiAdRevenueCtx) {
+            new Chart(aiAdRevenueCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2024 (Baseline)', '2025 (Projection)', '2026 (Projection)', '2027 (Projection)'],
+                    datasets: [{
+                        label: '% of Search Ad Revenue from AI Overviews',
+                        data: [0, 1, 3.5, 6.5], 
+                        fill: false,
+                        borderColor: GOOGLE_PALETTE.green,
+                        tension: 0.1,
+                        pointBackgroundColor: GOOGLE_PALETTE.green,
+                        pointBorderColor: FONT_COLOR,
+                        pointHoverRadius: 7,
+                        pointRadius: 5,
+                    }]
+                },
+                options: SHARED_CHART_OPTIONS
+            });
+        }
+
+    </script>
+</body>
+</html>
